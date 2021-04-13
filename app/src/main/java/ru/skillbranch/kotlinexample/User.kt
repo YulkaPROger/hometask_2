@@ -33,7 +33,7 @@ class User private constructor(
     private var _login: String? = null
     var login: String
         set(value) {
-            _login = value?.toLowerCase()
+            _login = value.toLowerCase()
         }
         get() = _login!!
 

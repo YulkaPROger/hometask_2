@@ -45,14 +45,14 @@ object UserHolder {
 
     private fun getCorrectPhone(phone: String):String{
         return phone.replace("[^+\\d]".toRegex(), "")
-            ?.let {
+            .let {
                 if(it.count() >= 11 && it.startsWith("+")) it else throw IllegalArgumentException("A user with this phone already exists")
             }
     }
 
     private fun phoneIsValid(phone: String): Boolean {
         return phone.replace("[^+\\d]".toRegex(), "")
-            ?.let {
+            .let {
                 it.count() >= 11 && it.startsWith("+")
             }
     }
