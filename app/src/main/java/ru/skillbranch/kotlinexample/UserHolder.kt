@@ -53,7 +53,7 @@ object UserHolder {
     private fun phoneIsValid(phone: String): Boolean {
         return phone.replace("[^+\\d]".toRegex(), "")
             .let {
-                it.count() >= 11 && it.startsWith("+")
+                it.count() == 12 && it.startsWith("+")
             }
     }
 
