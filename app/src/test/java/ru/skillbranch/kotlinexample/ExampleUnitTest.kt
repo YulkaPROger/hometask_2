@@ -4,8 +4,7 @@ import org.junit.After
 import org.junit.Assert
 import org.junit.Test
 
-import org.junit.Assert.*
-import ru.skillbranch.kotlinexample.extentions.UserHolder
+import ru.skillbranch.kotlinexample.extensions.UserHolder
 
 class ExampleUnitTest {
 
