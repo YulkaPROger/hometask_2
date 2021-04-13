@@ -53,7 +53,9 @@ object UserHolder {
     private fun phoneIsValid(phone: String): Boolean {
         return phone.replace("[^+\\d]".toRegex(), "")
             .let {
-                it.count() == 12 && it.startsWith("+")
+                if(it.count() == 12 && it.startsWith("+")) true else {
+                    throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
+                }
             }
     }
 
