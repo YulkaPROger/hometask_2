@@ -34,10 +34,11 @@ object UserHolder {
     }
 
     fun registerUserByPhone(fullName: String, rawPhone: String): User {
+        phoneIsValid(rawPhone)
         val loginUser = getCorrectPhone(rawPhone)
         return User.makeUser(fullName = fullName, phone = loginUser)
             .also {
-                if (userIsRegister(it) || !phoneIsValid(rawPhone))
+                if (userIsRegister(it))
                     throw IllegalArgumentException("A user with this phone already exists")
                 else map[it.login] = it
             }

@@ -86,7 +86,7 @@ class ExampleUnitTest {
     @Test(expected = IllegalArgumentException::class)
     fun register_user_by_phone_fail_illegal_name() {
         val holder = UserHolder
-        holder.registerUserByPhone("John Doe", "+7 (XXX) XX XX-XX")
+        holder.registerUserByPhone("John Doe", "+7 (XXX) XX XX-12")
     }
 
     @Test(expected = IllegalArgumentException::class)
